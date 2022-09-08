@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import se331.rest.dao.EventDao;
 import se331.rest.entity.Event;
+import se331.rest.entity.Organizer;
 
 import java.util.List;
 
@@ -17,12 +18,12 @@ public class EventServiceImpl implements EventService{
     }
 
     @Override
-    public List<Event> getEvents(Integer pageSize, Integer page) {
+    public List<Organizer> getEvents(Integer pageSize, Integer page) {
         return eventDao.getEvents(pageSize, page);
     }
 
     @Override
-    public Event getEvent(Long id) {
+    public Organizer getEvent(Long id) {
         return eventDao.getEvent(id);
     }
 }
